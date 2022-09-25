@@ -13,13 +13,15 @@ void setup(){
 }
 
 void draw(){
-fill(0,0,0,10);
-rect(0,0,300,300);
+  fill(0,0,0,20);
+  rect(-10,-10,320,320);
+  if (endY < 300){
   endX = startX+(int)(Math.random()*40 - 20);
   endY = startY+(int)(Math.random()*20);
   line(startX,startY,endX, endY);
   startX = endX;
   startY = endY;
+  }
 }
 
 void mousePressed(){
